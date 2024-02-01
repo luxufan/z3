@@ -584,3 +584,6 @@ if (Z3_BUILD_DOCUMENTATION)
 else()
   message(STATUS "Building documentation disabled")
 endif()
+
+set(NO_REFERENCE_OUTPUT true)
+file(COPY lit.local.cfg DESTINATION "${CMAKE_CURRENT_BINARY_DIR}")

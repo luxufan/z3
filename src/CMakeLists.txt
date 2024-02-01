@@ -241,9 +241,7 @@ endif()
 ################################################################################
 # Z3 executable
 ################################################################################
-cmake_dependent_option(Z3_BUILD_EXECUTABLE
-    "Build the z3 executable" ON
-    "CMAKE_SOURCE_DIR STREQUAL PROJECT_SOURCE_DIR" OFF)
+set(Z3_BUILD_EXECUTABLE ON)
 
 if (Z3_BUILD_EXECUTABLE)
     add_subdirectory(shell)

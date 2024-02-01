@@ -17,7 +17,8 @@ foreach (component ${Z3_LIBZ3_COMPONENTS_LIST})
     list(APPEND shell_object_files $<TARGET_OBJECTS:${component}>)
   endif()
 endforeach()
-add_executable(shell
+set(RUN_OPTIONS test.smt2)
+llvm_multisource(shell
   datalog_frontend.cpp
   dimacs_frontend.cpp
   drat_frontend.cpp

@@ -223,6 +223,7 @@ macro(z3_add_component component_name)
 
   set_property(GLOBAL PROPERTY Z3_${component_name}_DEPS "")
   # Record this component's dependencies
+  list(APPEND Z3_MOD_COMPONENT_DEPENDENCIES "build-timeit")
   foreach (dependency ${Z3_MOD_COMPONENT_DEPENDENCIES})
     if (NOT (TARGET ${dependency}))
       message(FATAL_ERROR "Component \"${component_name}\" depends on a non existent component \"${dependency}\"")
