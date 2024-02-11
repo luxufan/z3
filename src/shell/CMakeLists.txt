@@ -18,6 +18,7 @@ foreach (component ${Z3_LIBZ3_COMPONENTS_LIST})
   endif()
 endforeach()
 set(RUN_OPTIONS test.smt2)
+list(APPEND TEST_TARGETS shell)
 llvm_multisource(shell
   datalog_frontend.cpp
   dimacs_frontend.cpp
