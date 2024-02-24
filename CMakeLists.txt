@@ -446,13 +446,6 @@ configure_file(
 
 # Target needs to be declared before the components so that they can add
 # dependencies to this target so they can run their own custom uninstall rules.
-add_custom_target(uninstall
-  COMMAND
-  "${CMAKE_COMMAND}" -P "${CMAKE_CURRENT_BINARY_DIR}/cmake_uninstall.cmake"
-  COMMENT "Uninstalling..."
-  USES_TERMINAL
-  VERBATIM
-)
 
 ################################################################################
 # CMake build file locations
